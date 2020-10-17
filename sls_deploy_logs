@@ -1,0 +1,359 @@
+C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend>sls deploy -v
+Serverless: Configuration warning at 'provider.environment.AWS_NODEJS_CONNECTION_REUSE_ENABLED': unsupported configuration format
+Serverless:
+Serverless: Learn more about configuration validation here: http://slss.io/configuration-validation
+Serverless:
+Serverless: Using configuration:
+{
+  "webpackConfig": "./webpack.config.js",
+  "includeModules": true,
+  "packagerOptions": {
+    "scripts": [
+      "rm -rf node_modules/aws-sdk"
+    ]
+  },
+  "packager": "npm",
+  "keepOutputDirectory": false
+}
+Serverless: Removing C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack
+Serverless: Using multi-compile (individual packaging)
+Serverless: Bundling with Webpack...
+Time: 1452ms
+Built at: 10/17/2020 4:24:39 PM
+                                 Asset      Size  Chunks                   Chunk Names
+    src/lambda/auth/auth0Authorizer.js   2.4 KiB       0  [emitted]        src/lambda/auth/auth0Authorizer
+src/lambda/auth/auth0Authorizer.js.map  9.25 KiB       0  [emitted] [dev]  src/lambda/auth/auth0Authorizer
+Entrypoint src/lambda/auth/auth0Authorizer = src/lambda/auth/auth0Authorizer.js src/lambda/auth/auth0Authorizer.js.map
+[0] external "winston" 42 bytes {0} [built]
+[1] external "jsonwebtoken" 42 bytes {0} [built]
+[2] external "axios" 42 bytes {0} [built]
+[3] external "source-map-support/register" 42 bytes {0} [built]
+[4] ./src/lambda/auth/auth0Authorizer.ts + 1 modules 2.54 KiB {0} [built]
+    | ./src/lambda/auth/auth0Authorizer.ts 2.22 KiB [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+Time: 1442ms
+Built at: 10/17/2020 4:24:39 PM
+                          Asset      Size  Chunks                   Chunk Names
+    src/lambda/http/getTodos.js  4.27 KiB       0  [emitted]        src/lambda/http/getTodos
+src/lambda/http/getTodos.js.map  16.9 KiB       0  [emitted] [dev]  src/lambda/http/getTodos
+Entrypoint src/lambda/http/getTodos = src/lambda/http/getTodos.js src/lambda/http/getTodos.js.map
+[0] external "aws-sdk" 42 bytes {0} [built]
+[1] external "aws-xray-sdk" 42 bytes {0} [built]
+[2] external "winston" 42 bytes {0} [built]
+[3] external "jsonwebtoken" 42 bytes {0} [built]
+[4] external "source-map-support/register" 42 bytes {0} [built]
+[5] external "uuid/v4" 42 bytes {0} [built]
+[6] ./src/lambda/http/getTodos.ts + 6 modules 6.35 KiB {0} [built]
+    | ./src/lambda/http/getTodos.ts 924 bytes [built]
+    | ./src/helpers/authHelper.ts 607 bytes [built]
+    | ./src/dataLayer/todosAccess.ts 2.44 KiB [built]
+    | ./src/helpers/s3Helper.ts 1.2 KiB [built]
+    | ./src/helpers/apiResponseHelper.ts 875 bytes [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+    | ./src/models/todoItem.ts 28 bytes [built]
+Time: 1446ms
+Built at: 10/17/2020 4:24:39 PM
+                            Asset      Size  Chunks                   Chunk Names
+    src/lambda/http/deleteTodo.js  4.05 KiB       0  [emitted]        src/lambda/http/deleteTodo
+src/lambda/http/deleteTodo.js.map  15.6 KiB       0  [emitted] [dev]  src/lambda/http/deleteTodo
+Entrypoint src/lambda/http/deleteTodo = src/lambda/http/deleteTodo.js src/lambda/http/deleteTodo.js.map
+[0] external "winston" 42 bytes {0} [built]
+[1] external "jsonwebtoken" 42 bytes {0} [built]
+[2] external "aws-sdk" 42 bytes {0} [built]
+[3] external "aws-xray-sdk" 42 bytes {0} [built]
+[4] external "source-map-support/register" 42 bytes {0} [built]
+[5] external "uuid/v4" 42 bytes {0} [built]
+[6] ./src/lambda/http/deleteTodo.ts + 5 modules 5.7 KiB {0} [built]
+    | ./src/lambda/http/deleteTodo.ts 1.45 KiB [built]
+    | ./src/helpers/authHelper.ts 607 bytes [built]
+    | ./src/dataLayer/todosAccess.ts 2.44 KiB [built]
+    | ./src/helpers/apiResponseHelper.ts 875 bytes [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+    | ./src/models/todoItem.ts 28 bytes [built]
+Time: 1431ms
+Built at: 10/17/2020 4:24:39 PM
+                            Asset      Size  Chunks                   Chunk Names
+    src/lambda/http/createTodo.js  3.62 KiB       0  [emitted]        src/lambda/http/createTodo
+src/lambda/http/createTodo.js.map  14.7 KiB       0  [emitted] [dev]  src/lambda/http/createTodo
+Entrypoint src/lambda/http/createTodo = src/lambda/http/createTodo.js src/lambda/http/createTodo.js.map
+[0] external "winston" 42 bytes {0} [built]
+[1] external "jsonwebtoken" 42 bytes {0} [built]
+[2] external "aws-sdk" 42 bytes {0} [built]
+[3] external "aws-xray-sdk" 42 bytes {0} [built]
+[4] external "source-map-support/register" 42 bytes {0} [built]
+[5] external "uuid/v4" 42 bytes {0} [built]
+[6] ./src/lambda/http/createTodo.ts + 5 modules 4.96 KiB {0} [built]
+    | ./src/lambda/http/createTodo.ts 735 bytes [built]
+    | ./src/helpers/authHelper.ts 607 bytes [built]
+    | ./src/dataLayer/todosAccess.ts 2.44 KiB [built]
+    | ./src/helpers/apiResponseHelper.ts 875 bytes [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+    | ./src/models/todoItem.ts 28 bytes [built]
+Time: 1438ms
+Built at: 10/17/2020 4:24:39 PM
+                            Asset      Size  Chunks                   Chunk Names
+    src/lambda/http/updateTodo.js  3.97 KiB       0  [emitted]        src/lambda/http/updateTodo
+src/lambda/http/updateTodo.js.map  15.6 KiB       0  [emitted] [dev]  src/lambda/http/updateTodo
+Entrypoint src/lambda/http/updateTodo = src/lambda/http/updateTodo.js src/lambda/http/updateTodo.js.map
+[0] external "winston" 42 bytes {0} [built]
+[1] external "jsonwebtoken" 42 bytes {0} [built]
+[2] external "aws-sdk" 42 bytes {0} [built]
+[3] external "aws-xray-sdk" 42 bytes {0} [built]
+[4] external "source-map-support/register" 42 bytes {0} [built]
+[5] external "uuid/v4" 42 bytes {0} [built]
+[6] ./src/lambda/http/updateTodo.ts + 5 modules 5.61 KiB {0} [built]
+    | ./src/lambda/http/updateTodo.ts 1.37 KiB [built]
+    | ./src/helpers/authHelper.ts 607 bytes [built]
+    | ./src/dataLayer/todosAccess.ts 2.44 KiB [built]
+    | ./src/helpers/apiResponseHelper.ts 875 bytes [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+    | ./src/models/todoItem.ts 28 bytes [built]
+Time: 1435ms
+Built at: 10/17/2020 4:24:39 PM
+                                   Asset      Size  Chunks                   Chunk Names
+    src/lambda/http/generateUploadUrl.js  4.55 KiB       0  [emitted]        src/lambda/http/generateUploadUrl
+src/lambda/http/generateUploadUrl.js.map  17.5 KiB       0  [emitted] [dev]  src/lambda/http/generateUploadUrl
+Entrypoint src/lambda/http/generateUploadUrl = src/lambda/http/generateUploadUrl.js src/lambda/http/generateUploadUrl.js.map
+[0] external "aws-sdk" 42 bytes {0} [built]
+[1] external "aws-xray-sdk" 42 bytes {0} [built]
+[2] external "winston" 42 bytes {0} [built]
+[3] external "jsonwebtoken" 42 bytes {0} [built]
+[4] external "source-map-support/register" 42 bytes {0} [built]
+[5] external "uuid/v4" 42 bytes {0} [built]
+[6] ./src/lambda/http/generateUploadUrl.ts + 6 modules 6.76 KiB {0} [built]
+    | ./src/lambda/http/generateUploadUrl.ts 1.31 KiB [built]
+    | ./src/helpers/s3Helper.ts 1.2 KiB [built]
+    | ./src/helpers/apiResponseHelper.ts 875 bytes [built]
+    | ./src/dataLayer/todosAccess.ts 2.44 KiB [built]
+    | ./src/helpers/authHelper.ts 607 bytes [built]
+    | ./src/utils/logger.ts 316 bytes [built]
+    | ./src/models/todoItem.ts 28 bytes [built]
+Serverless: Fetch dependency graph from C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\package.json
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Package lock found - Using locked versions
+Serverless: Packing external modules: winston@^3.2.1, jsonwebtoken@^8.5.1, axios@^0.19.0, source-map-support@^0.5.10, aws-xray-sdk@^2.5.0, uuid@^3.3.3
+Serverless: Package took [20619 ms]
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\Auth [14305 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\Auth [3725 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\Auth [1059 ms]
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\GetTodos [15215 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\GetTodos [2621 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\GetTodos [1789 ms]
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\DeleteTodo [14914 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\DeleteTodo [3217 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\DeleteTodo [1777 ms]
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\CreateTodo [14627 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\CreateTodo [2470 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\CreateTodo [1876 ms]
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\UpdateTodo [15014 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\UpdateTodo [2767 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\UpdateTodo [1931 ms]
+Serverless: INFO: Runtime dependency 'aws-sdk' found in devDependencies. It has been excluded automatically.
+Serverless: Copy modules: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\GenerateUploadUrl [15169 ms]
+Serverless: Prune: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\GenerateUploadUrl [3061 ms]
+Serverless: Run scripts: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\GenerateUploadUrl [2050 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\Auth [4022 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\GetTodos [4781 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\DeleteTodo [4472 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\CreateTodo [4512 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\UpdateTodo [5871 ms]
+Serverless: Zip function: C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack\GenerateUploadUrl [6509 ms]
+Serverless: Packaging service...
+Serverless: Remove C:\Users\sevgi\Desktop\udacity\cloud-developer\course-04\project\serverless-todo-app\backend\.webpack
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service Auth.zip file to S3 (1.97 MB)...
+Serverless: Uploading service GetTodos.zip file to S3 (3.13 MB)...
+Serverless: Uploading service DeleteTodo.zip file to S3 (3.13 MB)...
+Serverless: Uploading service GenerateUploadUrl.zip file to S3 (3.13 MB)...
+Serverless: Uploading service UpdateTodo.zip file to S3 (3.13 MB)...
+Serverless: Uploading service CreateTodo.zip file to S3 (3.13 MB)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - serverless-todo-app-dev
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - TodoBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - CreateTodoLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - AuthLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - UpdateTodoLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - TodoDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GenerateUploadUrlLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::RestApi - ApiGatewayRestApi
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - IamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - DeleteTodoLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::RestApi - ApiGatewayRestApi
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - TodoDynamoDbTable
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::RestApi - ApiGatewayRestApi
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - IamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - TodoBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - AuthLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - UpdateTodoLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - CreateTodoLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - DeleteTodoLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - AuthLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - UpdateTodoLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GenerateUploadUrlLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - CreateTodoLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - DeleteTodoLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - GenerateUploadUrlLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceTodos
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::RequestValidator - RequestBodyValidator
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Model - CreateTodoModel
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceTodos
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::GatewayResponse - GatewayResponseDefault4XX
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::RequestValidator - RequestBodyValidator
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Model - UpdateTodoModel
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceTodos
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Model - CreateTodoModel
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::GatewayResponse - GatewayResponseDefault4XX
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::RequestValidator - RequestBodyValidator
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::GatewayResponse - GatewayResponseDefault4XX
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Model - CreateTodoModel
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Model - UpdateTodoModel
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Model - UpdateTodoModel
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceTodosTodoidVar
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetTodosLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceTodosTodoidVar
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodTodosOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceTodosTodoidVar
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetTodosLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - GetTodosLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceTodosTodoidVarAttachment
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceTodosTodoidVarAttachment
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceTodosTodoidVarAttachment
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarAttachmentOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarAttachmentOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarAttachmentOptions
+CloudFormation - CREATE_COMPLETE - AWS::IAM::Role - IamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - DeleteTodoLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - UpdateTodoLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GenerateUploadUrlLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - AuthLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetTodosLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - CreateTodoLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - AuthLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - UpdateTodoLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - DeleteTodoLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GenerateUploadUrlLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetTodosLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - AuthLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - UpdateTodoLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - DeleteTodoLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - GenerateUploadUrlLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - CreateTodoLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - GetTodosLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - CreateTodoLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::S3::Bucket - TodoBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - AuthLambdaVersionVEPFdbLLNTOU62H3KwbseXfFmXo7DpgPRBc9VgDNQ
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Authorizer - AuthApiGatewayAuthorizer
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GenerateUploadUrlLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - UpdateTodoLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateTodoLambdaVersion8yuCAWpY4i0hpqPETWdRELpkJ5VrTS6zTe88bqJPY
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GenerateUploadUrlLambdaVersionZ4GAlSXvTjaG9X7NZg39c54X7qrimrbatswxwdWyAYM
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetTodosLambdaVersionZajBfiAv2Awy0w5dFuadHccJqB42SLgAVdB8eQ76Mk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - DeleteTodoLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteTodoLambdaVersionMUh5f1lZvsG2tyJ27eHwlGOVYPxhfbIX0kHHOo10
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GenerateUploadUrlLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - UpdateTodoLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Authorizer - AuthApiGatewayAuthorizer
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - DeleteTodoLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - AuthLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - AuthLambdaVersionVEPFdbLLNTOU62H3KwbseXfFmXo7DpgPRBc9VgDNQ
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Authorizer - AuthApiGatewayAuthorizer
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GenerateUploadUrlLambdaVersionZ4GAlSXvTjaG9X7NZg39c54X7qrimrbatswxwdWyAYM
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetTodosLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - CreateTodoLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetTodosLambdaVersionZajBfiAv2Awy0w5dFuadHccJqB42SLgAVdB8eQ76Mk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateTodoLambdaVersion8yuCAWpY4i0hpqPETWdRELpkJ5VrTS6zTe88bqJPY
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - AuthLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteTodoLambdaVersionMUh5f1lZvsG2tyJ27eHwlGOVYPxhfbIX0kHHOo10
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateTodoLambdaVersion9md5z74FW9Pt4ptdyPcDyGcv4wxmUeo6dAYLdasp0io
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - CreateTodoLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetTodosLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GenerateUploadUrlLambdaVersionZ4GAlSXvTjaG9X7NZg39c54X7qrimrbatswxwdWyAYM
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - AuthLambdaVersionVEPFdbLLNTOU62H3KwbseXfFmXo7DpgPRBc9VgDNQ
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetTodosLambdaVersionZajBfiAv2Awy0w5dFuadHccJqB42SLgAVdB8eQ76Mk
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - UpdateTodoLambdaVersion8yuCAWpY4i0hpqPETWdRELpkJ5VrTS6zTe88bqJPY
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - DeleteTodoLambdaVersionMUh5f1lZvsG2tyJ27eHwlGOVYPxhfbIX0kHHOo10
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateTodoLambdaVersion9md5z74FW9Pt4ptdyPcDyGcv4wxmUeo6dAYLdasp0io
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - CreateTodoLambdaVersion9md5z74FW9Pt4ptdyPcDyGcv4wxmUeo6dAYLdasp0io
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosGet
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarAttachmentPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarDelete
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosGet
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarPatch
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarAttachmentPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarDelete
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarPatch
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodTodosGet
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarAttachmentPost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodTodosPost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarPatch
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodTodosTodoidVarDelete
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Deployment - ApiGatewayDeployment1602941074287
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Deployment - ApiGatewayDeployment1602941074287
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Deployment - ApiGatewayDeployment1602941074287
+CloudFormation - CREATE_COMPLETE - AWS::DynamoDB::Table - TodoDynamoDbTable
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - GenerateUploadUrlLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - UpdateTodoLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - DeleteTodoLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - AuthLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - CreateTodoLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - GetTodosLambdaPermissionApiGateway
+CloudFormation - UPDATE_COMPLETE_CLEANUP_IN_PROGRESS - AWS::CloudFormation::Stack - serverless-todo-app-dev
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - serverless-todo-app-dev
+Serverless: Stack update finished...
+Service Information
+service: serverless-todo-app
+stage: dev
+region: eu-central-1
+stack: serverless-todo-app-dev
+resources: 47
+api keys:
+  None
+endpoints:
+  GET - https://ok0vfe6sy3.execute-api.eu-central-1.amazonaws.com/dev/todos
+  DELETE - https://ok0vfe6sy3.execute-api.eu-central-1.amazonaws.com/dev/todos/{todoId}
+  POST - https://ok0vfe6sy3.execute-api.eu-central-1.amazonaws.com/dev/todos
+  PATCH - https://ok0vfe6sy3.execute-api.eu-central-1.amazonaws.com/dev/todos/{todoId}
+  POST - https://ok0vfe6sy3.execute-api.eu-central-1.amazonaws.com/dev/todos/{todoId}/attachment
+functions:
+  Auth: serverless-todo-app-dev-Auth
+  GetTodos: serverless-todo-app-dev-GetTodos
+  DeleteTodo: serverless-todo-app-dev-DeleteTodo
+  CreateTodo: serverless-todo-app-dev-CreateTodo
+  UpdateTodo: serverless-todo-app-dev-UpdateTodo
+  GenerateUploadUrl: serverless-todo-app-dev-GenerateUploadUrl
+layers:
+  None
+
+Stack Outputs
+AuthLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:serverless-todo-app-dev-Auth:1
+GenerateUploadUrlLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:serverless-todo-app-dev-GenerateUploadUrl:1
+UpdateTodoLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:serverless-todo-app-dev-UpdateTodo:1
+AwsDocApiId: ok0vfe6sy3
+GetTodosLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:serverless-todo-app-dev-GetTodos:1
+DeleteTodoLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:serverless-todo-app-dev-DeleteTodo:1
+CreateTodoLambdaFunctionQualifiedArn: arn:aws:lambda:eu-central-1:412725244030:function:serverless-todo-app-dev-CreateTodo:1
+ServiceEndpoint: https://ok0vfe6sy3.execute-api.eu-central-1.amazonaws.com/dev
+ServerlessDeploymentBucket
+
+
+
+
+https://github.com/Amr-Helal/Todo_Serverless_Application
