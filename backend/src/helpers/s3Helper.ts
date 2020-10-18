@@ -27,7 +27,7 @@ export class S3Helper{
         return  this.s3.getSignedUrl('getObject', {
             Bucket: process.env.IMAGES_BUCKET,
             Key: `${todoId}.png`,
-            Expires: parseInt(this.signedUrlExpireSeconds)
+            Expires: this.signedUrlExpireSeconds
             });
         }catch(err){
             console.log(err)
@@ -39,7 +39,7 @@ export class S3Helper{
         return this.s3.getSignedUrl('putObject', {
             Bucket: process.env.IMAGES_BUCKET,
             Key: `${todoId}.png`,
-            Expires: parseInt(this.signedUrlExpireSeconds)
+            Expires: this.signedUrlExpireSeconds
           }) as string ;
     }
 }
